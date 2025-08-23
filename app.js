@@ -179,13 +179,12 @@ for(let i = 0; i < mixed.length; i++){
 	let value = mixed[i];
 	let message = "";
 
-	if(typeof value === 'number'){
-		if(value % 2 ===0){
+	if(typeof value === 'number' && value % 2 === 0){
 			message = "even";
-		}else{
+		}else if(typeof value === 'number' && value % 2 !== 0){
 			message = "odd";
 		}
-	}else{
+	else{
 		message = "not number";
 	}
 
